@@ -1,0 +1,51 @@
+#Creo la carpeta.
+mkdir Exercise_Unit5_website
+
+#Entro a la carpeta.
+cd Exercise_Unit5_website
+
+#Realizo copia del directorio descargado de Github
+git clone https://github.com/CleanMatyx/Exercise_Unit5_website
+
+#Creo el archivo index.html y creo la página web primitiva.
+notepad index.html
+
+#Añado el archivo al repositorio
+git add "index.html"
+
+#Realizo el 'commit' de index.html y escribo comentario en el archivo notepad que se abre automáticamente
+git commit
+
+#Realizo una actualización de index.html añadiendo una imagen
+notepad index.html
+
+#'Commit' de index.html con comentario
+git add "index.html"
+git commit -m "Added first image"
+
+#Creo nueva rama llamada 'about'
+git branch about
+
+#Voy a la nueva rama
+git checkout about
+
+#Modifico para añadir información en <footer> en el archivo index.html
+notepad index.html
+
+#'Commit' de index.html con comentario
+git add "index.html"
+git commit -m "Contact information"
+
+#unir la rama 'about' con la rama 'master'
+git checkout master
+git merge about
+
+#Creo una nueva rama 'home'
+git branch home
+
+#Editar 'index.html' e intentar generar conflicto entre ramas
+notepad index.html
+
+#Unir la rama de 'home' a 'main' y solventar conflicto
+git checkout main
+git merge home
